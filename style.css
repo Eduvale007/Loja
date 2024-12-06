@@ -19,12 +19,13 @@ body {
   font-family: Arial, sans-serif;
   background: linear-gradient(to bottom, #1e1e2f, #2c2c4a);
   color: #fff;
+  z-index: -1;
 }
 
 /* HEADER */
 header {
   position: fixed;
- 
+ z-index: 2;
 }
 /* Navbar */
 .navbar {
@@ -33,21 +34,17 @@ header {
   align-items: center;
   position: fixed;
   padding: 20px 50px;
-<<<<<<< HEAD
   background: var(--quaternary-color);
-=======
   top: 0;
   right: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.9);
->>>>>>> 20de52966c76c016578ba8c074152a7a0c0b13e6
   height: 8vh;
 }
 
 .navbar .nav-list {
   display: flex;
   list-style: none;
-  gap: 25px;
 }
 
 .nav-list ul {
@@ -55,14 +52,19 @@ header {
   margin-left: 32px;
 }
 
-a {
-  transition: 0.3s;
+.nav-list a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;  
+    margin-left:23px;
 }
 
-.navbar ul li a {
+.navbar ul li  {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
+
 }
 .mobile-menu {
   display: none;
@@ -158,10 +160,6 @@ button::before {
   transition: 0.5s;
 }
 
-.title__projects:hover::after,
-button:hover::before {
-  width: 100%;
-}
 
 /* GRID E IMAGES */
 
@@ -326,14 +324,11 @@ button:hover::before {
   background-image: linear-gradient(
     0deg,
     rgba(255, 255, 255, 0.1) 0%,
-    #9b5955 75%
+    var(--primary-color) 75%
   );
   border-radius: 9999px;
-<<<<<<< HEAD
   box-shadow: 0 1px 5px 3px var(--primary-color), 0 0 30px 5px var(--secondary-color);
-=======
-  box-shadow: 0 1px 5px 3px rgb(199, 95, 228), 0 0 30px 5px #ffdedc;
->>>>>>> 20de52966c76c016578ba8c074152a7a0c0b13e6
+  box-shadow: 0 1px 5px 3px var(--tertiary-color), 0 0 30px 5px var(--tertiary-color);
 }
 
 .card__price .title {
@@ -368,11 +363,8 @@ button:hover::before {
 .card__price .list .list-item .check {
   margin-right: 0.25rem;
   font-size: 1rem;
-<<<<<<< HEAD
   color: var(--primary-color);
-=======
-  color: rgb(255, 255, 255);
->>>>>>> 20de52966c76c016578ba8c074152a7a0c0b13e6
+  color: var(--primary-color); 
   font-weight: 900;
 }
 
@@ -386,11 +378,8 @@ button:hover::before {
   padding: 0.5rem 0.75rem;
   width: 100%;
   height: fit-content;
-<<<<<<< HEAD
   background-color:  var(--primary-color);
-=======
-  background-color: rgb(255, 255, 255);
->>>>>>> 20de52966c76c016578ba8c074152a7a0c0b13e6
+  background-color: var(--primary-color);
   font-size: 0.75rem;
   color: white;
   border: none;
@@ -401,7 +390,7 @@ button:hover::before {
 
 .card__price .button .text-button {
   position: relative;
-  z-index: 10;
+  z-index: 1;
 }
 
 .card__price .button::before,
@@ -435,11 +424,8 @@ button:hover::before {
 }
 
 .card__price .button:hover {
-<<<<<<< HEAD
   box-shadow: 0px 0px 20px 0 var(--primary-color);
-=======
-  box-shadow: 0px 0px 20px 0 rgb(255, 255, 255);
->>>>>>> 20de52966c76c016578ba8c074152a7a0c0b13e6
+  box-shadow: 0px 0px 20px 0 var(--primary-color);
 }
 
 .card__price .button:hover::before,
@@ -470,21 +456,39 @@ button:hover::before {
   }
   .nav-list {
     position: absolute;
-    top: 8vh;
+    top: 53px;
     right: 0;
     width: 50vw;
-    height: 92vh;
-    background: #030305;
+    background: rgba(0, 0, 0, 0.9);
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
   }
-  .nav-list li {
+   li {
     margin-left: 0;
-    opacity: 0;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    
   }
+  .nav-list a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  .nav-list li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(255, 0, 127);
+    opacity: 0.5; /* Ajuste a opacidade conforme necessário */
+  }
+  
   .mobile-menu {
     display: block;
   }
@@ -513,7 +517,26 @@ transform: rotate(-45deg) translate(-8px, 8px)
     transform: rotate(45deg) translate(-5px, -7px)
   }
 
+  .cta-btn-menu {
+    background: #dd0370;
+    color: #fff;
+    border: none;
+    padding: 9px 49px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-radius: 0;
+    height: 44px;
+  }
+
+  .button-li {
+    padding: 0;
+    border: none;
+  }
 }
+
 
 @media (max-width: 750px){
 
