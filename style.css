@@ -1,4 +1,11 @@
 /* Global Styles */
+:root{
+  --primary-color: rgb(255, 0, 127);
+  --secondary-color: #f44336;
+  --tertiary-color:rgb(252, 0, 0);
+  --quaternary-color: rgba(0, 0, 0, 0.5);
+}
+
 
 * {
   margin: 0;
@@ -22,7 +29,7 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 20px 50px;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--quaternary-color);
   height: 8vh;
 }
 
@@ -53,12 +60,12 @@ a {
 .mobile-menu div {
   width: 32px;
   height: 2px;
-  background: #ff007f;
+  background: var(--primary-color);
   margin: 8px;
   transition: 0.3s;
 }
 .start-btn {
-  background: #ff007f;
+  background: var(--primary-color);
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -82,7 +89,7 @@ a {
   margin: 20px 0;
 }
 .cta-btn {
-  background: #ff007f;
+  background: var(--primary-color);
   color: #fff;
   padding: 15px 30px;
   border: none;
@@ -107,7 +114,7 @@ a {
 }
 .feature-card h2 {
   margin-bottom: 10px;
-  color: #ff007f;
+  color: var(--primary-color);
 }
 
 .titles__add {
@@ -135,7 +142,7 @@ button::before {
   content: "";
   width: 0%;
   height: 2px;
-  background: #f44336;
+  background: var(--secondary-color);
   display: block;
   transition: 0.5s;
 }
@@ -167,7 +174,7 @@ button:hover::before {
 }
 
 .card__title {
-  color: #ff007f;
+  color: var(--primary-color);
   font-size: 16px;
   text-transform: uppercase;
 }
@@ -179,7 +186,7 @@ button:hover::before {
 
 .card a {
   text-decoration: none;
-  background-color: #ff007f;
+  background-color: var(--primary-color);
 }
 
 .content {
@@ -190,7 +197,7 @@ button:hover::before {
   object-fit: cover;
   width: 100%;
   height: 150px;
-  background-color: #ff007f;
+  background-color: var(--primary-color);
 }
 
 .title {
@@ -245,7 +252,7 @@ button:hover::before {
   --color: #ff007f;
   --color2: rgb(10, 25, 30);
   padding: 0.8em 1.75em;
-  background-color: transparent;
+  background-color: #ff007f;
   border-radius: 6px;
   border: 0.3px solid var(--color);
   transition: 0.5s;
@@ -257,46 +264,10 @@ button:hover::before {
   font-size: 17px;
   font-family: "Roboto", "Segoe UI", sans-serif;
   text-transform: uppercase;
-  color: var(--color);
+
 }
 
-.btn::after,
-.btn::before {
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  transform: skew(90deg) translate(-50%, -50%);
-  position: absolute;
-  inset: 50%;
-  left: 25%;
-  z-index: -1;
-  transition: 0.5s ease-out;
-  background-color: var(--color);
-}
 
-.btn::before {
-  top: -50%;
-  left: -25%;
-  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
-}
-
-.btn:hover::before {
-  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
-}
-
-.btn:hover::after {
-  transform: skew(45deg) translate(-50%, -50%);
-}
-
-.btn:hover {
-  color: var(--color2);
-}
-
-.btn:active {
-  filter: brightness(0.7);
-  transform: scale(0.98);
-}
 
 .cards__price {
   display: flex;
@@ -313,10 +284,10 @@ button:hover::before {
   padding: 1rem;
   width: 14rem;
   height: auto;
-  background-color: rgb(26, 23, 23);
+  background-color:  var(--quaternary-color);
   background-image: radial-gradient(
       circle at 0% 0%,
-      rgb(37, 7, 44) 15%,
+   rgba(0, 0, 0, 0.8)
       rgba(0, 0, 0, 0) 75%
     ),
     radial-gradient(
@@ -340,14 +311,14 @@ button:hover::before {
   right: 1rem;
   width: 2rem;
   height: 2rem;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--primary-color);
   background-image: linear-gradient(
     0deg,
     rgba(255, 255, 255, 0.1) 0%,
     #f44336 75%
   );
   border-radius: 9999px;
-  box-shadow: 0 1px 5px 3px rgb(199, 95, 228), 0 0 30px 5px #f44336;
+  box-shadow: 0 1px 5px 3px var(--primary-color), 0 0 30px 5px var(--secondary-color);
 }
 
 .card__price .title {
@@ -382,9 +353,11 @@ button:hover::before {
 .card__price .list .list-item .check {
   margin-right: 0.25rem;
   font-size: 1rem;
-  color: rgb(228, 95, 95);
+  color: var(--primary-color);
   font-weight: 900;
 }
+
+
 
 .card__price .button {
   overflow: hidden;
@@ -394,12 +367,12 @@ button:hover::before {
   padding: 0.5rem 0.75rem;
   width: 100%;
   height: fit-content;
-  background-color: rgb(207, 31, 31);
+  background-color:  var(--primary-color);
   font-size: 0.75rem;
   color: white;
   border: none;
   border-radius: 0.5rem;
-  box-shadow: 0px 0px 2px 1px rgb(58, 57, 57);
+  box-shadow: 0px 0px 2px 1px var(--primary-color);
   transition: all 0.3s cubic-bezier(1, 0, 0, 1);
 }
 
@@ -423,7 +396,7 @@ button:hover::before {
   background-image: radial-gradient(
     circle at 0% 45%,
     rgba(16, 5, 36, 1) 19%,
-    rgba(16, 5, 36, 0.26) 46%,
+    rgb(255, 0, 127) 46%,
     rgba(16, 5, 36, 0) 100%
   );
 }
@@ -439,7 +412,7 @@ button:hover::before {
 }
 
 .card__price .button:hover {
-  box-shadow: 0px 0px 20px 0 rgb(143, 48, 48);
+  box-shadow: 0px 0px 20px 0 var(--primary-color);
 }
 
 .card__price .button:hover::before,
@@ -512,5 +485,27 @@ transform: rotate(-45deg) translate(-8px, 8px)
   .mobile-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -7px)
   }
+
 }
-/*ANIMATIONS*/
+
+@media (max-width: 750px){
+
+  .features{
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  
+.feature-card {
+  width: 100%;
+      padding: 20px;
+}
+
+.cards__price{
+  flex-direction: column;
+  align-items: center;
+}
+}
+
+
