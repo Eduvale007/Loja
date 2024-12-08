@@ -559,3 +559,9 @@ transform: rotate(-45deg) translate(-8px, 8px)
 }
 
 
+@media (min-width: 1000px) {
+  .button-li {
+    display: none;
+  }
+  
+}
