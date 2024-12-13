@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="mobileResponsive.css"
   </head>
   <body>
-    <header class="header">
+    <header class="navbar" id="header">
       <nav class="navbar">
         <h1 class="title__logo">WebFast</h1>
         <div class="mobile-menu">
@@ -25,7 +25,11 @@
         </ul>
         <button class="start-btn">Login</button>
       </nav>
+      <div class="progress-loader">
+        <div class="progress" id="progress"></div>
+      </div>
     </header>
+    
 
     <section>
       <div class="hero">
@@ -208,5 +212,7 @@
       <p>© 2024 Website Criativo. Todos os direitos reservados.</p>
     </footer>
   </body>
-  <script src="./mobile-navbar.js"></script>
+  <script src="./mobile-navbar.js">
+  </script>
+  <script src="./progress-bar.js"></script>
 </html>

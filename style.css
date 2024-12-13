@@ -4,6 +4,7 @@
   --secondary-color: #f44336;
   --tertiary-color:rgb(252, 0, 0);
   --quaternary-color: rgba(0, 0, 0, 0.5);
+  
 }
 
 
@@ -563,5 +564,70 @@ transform: rotate(-45deg) translate(-8px, 8px)
   .button-li {
     display: none;
   }
+  .nav-list a {
+    text-decoration: none; /* Remova qualquer linha padrão */
+    color: #fff; /* Garanta que o texto seja branco */
+    padding: 5px 10px; /* Ajuste para visualização */
+    position: relative; /* Necessário para os ::after funcionarem */
+  }
   
+  .nav-list a::after {
+    content: '';
+    display: block;
+    width: 0; /* Largura inicial */
+    height: 3px; /* Espessura da linha */
+    background: var(--primary-color); /* Cor da linha */
+    transition: width 0.3s; /* Animação */
+    position: absolute; /* Para posicionar em relação ao link */
+    bottom: 0; /* Alinha no final do link */
+    left: 0; /* Começa do lado esquerdo */
+  }
+  
+  .nav-list a:hover::after {
+    width: 100%; /* A linha se estende pela largura do link ao passar o mouse */
+  }
+ /* From Uiverse.io by KeylaSUE */ 
+
+/* Barra de progresso */
+.progress-loader {
+  position: fixed;
+  top: 8%;
+  left: 0;
+  width: 100%;
+  height: 4px; /* Altura da barra */
+  background-color: rgba(255, 255, 255, 0.2); /* Cor de fundo */
+  z-index: 10;
+}
+
+.progress {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(to right, var(--quaternary-color), var(--primary-color));
+  transition: width 0.1s ease-out;
+}
+
+
+
+@keyframes loading1274 {
+  0% {
+    width: 0%;
+  }
+
+  10% {
+    width: 10%;
+  }
+
+  50% {
+    width: 40%;
+  }
+
+  60% {
+    width: 60%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+ 
 }
