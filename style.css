@@ -5,6 +5,7 @@
   --tertiary-color:rgb(252, 0, 0);
   --quaternary-color: rgba(0, 0, 0, 0.5);
   
+  --quinary-color: rgba(0, 0, 0, 0.8);
 }
 
 
@@ -120,7 +121,7 @@ header {
   background: rgba(0, 0, 0, 0.8);
 }
 .feature-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: #ffffff1a;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
