@@ -74,9 +74,12 @@
   font-weight: 700;
 }
 
+/*
 .page-link-label:hover {
   color: #000;
 }
+                  !!!!!COMENTEI PARA TESTAR ALGO!!!!!
+*/
 
 .form-btn {
   padding: 10px 15px;
