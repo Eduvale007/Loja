@@ -1,0 +1,8 @@
+:root{
+    --primary-color: rgb(255, 0, 127);
+    --secondary-color: #f44336;
+    --tertiary-color:rgb(252, 0, 0);
+    --quaternary-color: rgba(0, 0, 0, 0.5);
+    --quinary-color: rgba(0, 0, 0, 0.8);
+  }
+
